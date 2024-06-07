@@ -1,5 +1,8 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Sidebar from "@/components/Layout/Sidebar";
+import TopBar from "@/components/Layout/Topbar";
+import { ThemeProvider } from "@/components/Theme/theme-provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -11,7 +14,20 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Sidebar />
+          <div className="flex flex-col sm:gap-4 sm:py-4 sm:pl-14">
+            <TopBar />
+            {children}
+          </div>
+        </ThemeProvider>
+      </body>
     </html>
   );
 }
