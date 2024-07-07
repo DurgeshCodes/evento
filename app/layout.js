@@ -22,9 +22,11 @@ export default function RootLayout({ children }) {
           disableTransitionOnChange
         >
           <Sidebar />
-          <div className="flex flex-col sm:gap-4 sm:py-4 sm:pl-14">
+          <div className="h-full overflow-scroll sm:gap-4 sm:py-4 sm:pl-14">
             <TopBar />
-            {children}
+            <div className="p-4 h-[calc(100vh-40px)] overflow-scroll">
+              {children}
+            </div>
           </div>
         </ThemeProvider>
       </body>
