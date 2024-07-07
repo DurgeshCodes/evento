@@ -1,10 +1,10 @@
-import { CalendarIcon, LayoutDashboardIcon, WorkflowIcon } from "lucide-react";
+import { CalendarIcon, SquareLibrary, WorkflowIcon } from "lucide-react";
 
 const NAV_ITEMS = [
   {
-    label: "Dashboard",
-    href: "/dashboard",
-    icon: (className) => <LayoutDashboardIcon className={className} />,
+    label: "Library",
+    href: "/library",
+    icon: (className) => <SquareLibrary className={className} />,
   },
   {
     label: "Calendar",
