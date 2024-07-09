@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button"; // Adjust the import path based on your project structure
-import { List, Grid } from "lucide-react";
+import { List, Grid, Plus } from "lucide-react";
 import ChapterCard from "@/components/ChapterCard";
 import { Badge } from "@/components/ui/badge";
 
@@ -36,6 +36,10 @@ export default function SubjectDetails({
           ))}
         </div>
         <div className="flex space-x-2">
+          <Button onClick={() => {}}>
+            <Plus />
+            Add Chapter
+          </Button>
           <Button
             variant="secondary"
             onClick={() => setIsGridView(true)}

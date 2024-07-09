@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import SubjectCard from "@/components/SubjectCard";
 import { Button } from "@/components/ui/button"; // Adjust the import path based on your project structure
-import { List, Grid } from "lucide-react";
+import { List, Grid, Plus } from "lucide-react";
 
 const subjects = [
   { id: 1, name: "Database Management", tags: ["SQL", "NoSQL", "Indexing"] },
@@ -24,6 +24,10 @@ export default function Home() {
     <div className="p-4">
       <div className="flex justify-end mb-4">
         <div className="flex space-x-2">
+          <Button onClick={() => {}}>
+            <Plus />
+            Add Subject
+          </Button>
           <Button
             variant="secondary"
             onClick={() => setIsGridView(true)}
